@@ -1,0 +1,37 @@
+@media (max-width: 1200px){
+
+}
+@media (max-width: 991px){
+
+}
+@media (max-width: 767px){
+    //header
+    .navbar {
+        .navbar-nav {
+            margin-top: 1rem;
+        }
+        .nav-links {
+            flex-direction: column;
+            margin: unset !important;
+        }
+        .nav-login {
+            margin: 0px 0.5rem;
+        }
+    }
+    //footer
+    .footer {
+        .footer-content {
+            flex-direction: column;
+            text-align: center;
+            .social-links {
+                margin-top: 0.5rem;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+
+}
+@media (max-width: 330px) {
+
+}

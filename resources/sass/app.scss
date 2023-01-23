@@ -1,0 +1,361 @@
+//color variables
+$primary: #3843d0;
+$primary_light: #8ea1ff;
+$navy: #16006d;
+$purple: #16006d;
+$green: #00ffdb;
+$white: #ffffff;
+$hassan: #09c;
+
+body {
+    background-color: #ffffff;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, span, p, a {
+    font-family: 'AileronRegular' !important;
+}
+
+a, a:link, a:hover, a:active {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+.main {
+    min-height: 500px;
+}
+
+.select2-container--default .select2-selection--single {
+    height: 40px;
+    padding-top: 5px;
+}
+
+// start tagify
+.tags-look .tagify__dropdown__item {
+    display: inline-block;
+    border-radius: 3px;
+    padding: .3em .5em;
+    border: 1px solid #CCC;
+    background: #F3F3F3;
+    margin: .2em;
+    font-size: .85em;
+    color: black;
+    transition: 0s;
+}
+
+.tags-look .tagify__dropdown__item--active {
+    color: black;
+}
+
+.tags-look .tagify__dropdown__item:hover {
+    background: lightyellow;
+    border-color: gold;
+}
+
+.single-employee .image {
+    display: flex;
+    justify-content: center;
+}
+
+// end tagify
+.view-content .table tr td:first-child {
+    width: 20% !important;
+}
+
+.nav-link {
+    padding: 5px;
+}
+
+.grid-responsive th, .grid-responsive td {
+    background-color: #fff !important;
+    box-shadow: none !important;
+}
+
+.grid-responsive .btn-xs {
+    padding: 5px !important;
+}
+
+.modal-backdrop.show {
+    z-index: 1 !important;
+}
+
+/************** global *****************/
+
+.m-auto {
+    margin: auto !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: $primary;
+    outline: 0;
+    box-shadow: unset;
+}
+
+table {
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                td {
+                    background-color: lighten($color: $primary_light, $amount: 20) !important;
+                }
+            }
+
+            &:last-child {
+                td {
+                    border-width: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+table.table-view {
+    table-layout: fixed;
+}
+
+table.table-view tbody tr td:first-child {
+    font-weight: bolder;
+    width: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/************** dropdown *****************/
+.dropdown-menu {
+    border-radius: 8px;
+    min-width: 5rem;
+
+    a {
+        &:hover {
+            color: $primary !important;
+            background-color: $white !important;
+        }
+
+        &:active {
+            color: $primary !important;
+            background-color: $white !important;
+        }
+
+        i {
+            margin-right: 10px;
+            color: $primary !important;
+            font-size: 15px;
+        }
+    }
+}
+
+/************** navbar *****************/
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0.8rem 0;
+    transition: 0.3s;
+    top: 0;
+
+    .left-nav {
+        display: flex;
+        justify-content: space-between;
+        margin-inline-start: -.7rem;
+
+        &-guest {
+            display: flex;
+            justify-content: space-between;
+            width: 40%;
+            margin-inline-start: 3rem;
+        }
+    }
+
+    .right-nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+
+        img {
+            height: 30px;
+        }
+    }
+
+    .navbar-nav {
+        justify-content: space-between;
+        width: 90%;
+        margin-inline-start: 5rem;
+        display: flex;
+        padding: 5px 15px;
+
+        .nav-item {
+            a {
+                padding-right: 0;
+                padding-left: 0;
+                margin: 0px 0.2rem;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    border-radius: 4px;
+                    background-color: $primary;
+                    bottom: 0;
+                    left: 0;
+                    transform-origin: right;
+                    transform: scaleX(0);
+                    transition: transform .3s ease-in-out;
+                }
+
+                &:hover {
+                    color: $primary;
+
+                    &::before {
+                        transform-origin: left;
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+
+        .dropdown-menu[data-bs-popper] {
+            left: unset;
+            right: 0;
+        }
+    }
+
+    &.nav-fixed {
+        padding: 0.5rem 0;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .dropdown-menu {
+        .dropdown-item {
+            margin: 0 !important;
+            padding: 0.25rem 1.5rem !important;
+
+            &:hover {
+                margin: 0 !important;
+            }
+        }
+    }
+}
+
+/************** footer *****************/
+.footer {
+    margin: 1rem 0;
+
+    .footer-content {
+        padding: 1rem 0;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        .social-links {
+            display: inline-flex;
+            flex-wrap: wrap;
+            padding: 0 0;
+            list-style: none;
+            text-align: center;
+
+            a {
+                color: gray;
+            }
+
+            li {
+                &:first-child {
+                    a {
+                        &:hover {
+                            color: #4267B2
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    a {
+                        &:hover {
+                            color: #00acee
+                        }
+                    }
+                }
+
+                &:nth-child(3) {
+                    a {
+                        &:hover {
+                            color: #0e76a8
+                        }
+                    }
+                }
+
+                &:last-child {
+                    a {
+                        &:hover {
+                            color: #dd4b39
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.main-content {
+    margin-top: 100px;
+}
+
+
+/***********************************************************/
+@import "grid-responsive";
+@import "media";
+@import "rtl";

@@ -1,0 +1,65 @@
+@media screen and (max-width: 991px) {
+    /*Table responsive*/
+    .grid-responsive {
+        display: block;
+    }
+    .grid-responsive thead {
+        display: none;
+    }
+    .grid-responsive tbody {
+        display: table;
+        width: 100%;
+    }
+    .grid-responsive tr {
+        display: table-row-group;
+    }
+    .grid-responsive tr:nth-child(odd) {
+        background-color: #ffffff !important; // #f7f7f7, #e2eaf2
+        /* optional */
+    }
+    .grid-responsive td {
+        display: table-row;
+        font-size: 15px !important;
+        text-align: left;
+        padding: 15px;
+    }
+    .grid-responsive td:before {
+        text-align: left;
+        display: table-cell;
+        padding: 7px 13px;
+        width: 35%;
+        content: attr(data-label);
+        font-weight: 600;
+    }
+    .grid-responsive .actions {
+        text-align: center;
+    }
+    .grid-responsive .actions a.btn {
+        margin-right: 10px !important;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        padding: 5px 10px 5px 10px !important;
+        font-size: 20px !important;
+    }
+    .grid-responsive table.dataTable.display tbody tr.odd > .sorting_1, .grid-responsive table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+        background-color: #2992cc !important;
+        color: #ffffff !important;
+    }
+    .grid-responsive table.dataTable.display tbody tr.even > .sorting_1, .grid-responsive table.dataTable.order-column.stripe tbody tr.even > .sorting_1 {
+        background-color: #2992cc !important;
+        color: #ffffff !important;
+    }
+    .dataTables_wrapper .dataTables_filter{
+        margin-top: 0px !important;
+        padding-left: 20px !important;
+        float: right !important;
+    }
+    .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter{
+        float: left;
+    }
+    .grid-responsive table tbody tr td:first-child{
+        background-color: #2992cc !important;
+        color: #ffffff !important;
+    }
+    /*Table responsive*/
+}
