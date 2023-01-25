@@ -4,8 +4,8 @@ VHR is a web application for recruitment:
 ## Setup
 
 ```bash
-git clone https://github.com/MahmoudNaguib/vhr.git
-cd  vhr
+git clone https://github.com/MahmoudNaguib/laravel-starter.git
+cd  laravel-starter
 cp .env.example .env // Change your configurations
 sudo npm install
 sudo composer install
